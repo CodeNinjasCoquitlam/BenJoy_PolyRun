@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
-        scoreText.gameObject.SetActive(false);
+       //scoreText.gameObject.SetActive(false);
         gameOverPanel.SetActive(true);
     }
 

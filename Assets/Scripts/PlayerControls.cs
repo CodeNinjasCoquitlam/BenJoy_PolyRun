@@ -70,14 +70,16 @@ public class PlayerControls : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
+     
         if (collision.tag == "Coin")
         {
+            GameObject.Find("GameController").GetComponent<GameController>().IncrementScore();
             Destroy(collision.gameObject);
         }
     }
     // Update is called once per frame
     void GameOver()
     {
-        Time.timeScale = 0;
+        GameObject.Find("GameController").GetComponent<GameController>().GameOver();
     }
 }
